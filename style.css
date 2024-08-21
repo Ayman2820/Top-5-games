@@ -1,13 +1,127 @@
-*{
-    background-color: antiquewhite;
-    
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
-h1{
+
+header {
+    background-color: #1c1c1c;
+    padding: 20px 0;
     text-align: center;
-    font-size: xx-large;
-    
-    font-weight: bold;
+    position: relative;
 }
-p{
-    text-align: right;
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    color: #00aced;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.intro {
+    max-width: 800px;
+    margin: 30px auto;
+    text-align: center;
+    font-size: 1.2em;
+    animation: slideIn 1s ease-in-out;
+}
+
+.intro p {
+    margin: 0;
+    padding: 0 20px;
+}
+
+.game-list {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.game-list h3 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #00aced;
+    animation: fadeIn 2s ease-in-out;
+}
+
+ol {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+li img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+li:hover img {
+    opacity: 0.8;
+}
+
+.game-info {
+    padding: 20px;
+}
+
+.game-info h4 {
+    margin: 0;
+    font-size: 2em;
+    color: #00aced;
+}
+
+.game-info p {
+    margin: 10px 0 0;
+    font-size: 1em;
+    color: #ccc;
+}
+
+footer {
+    background-color: #1c1c1c;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
